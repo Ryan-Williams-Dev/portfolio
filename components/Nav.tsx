@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Text, useColorModeValue, Icon } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { RiComputerLine } from "react-icons/ri"
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -24,7 +25,13 @@ const Logo = () => {
     <Link href='/' >
       <a>
         <LogoBox>
-          <Image src={logoImg} width={20} height={20} alt='logo' />
+          <Icon as={RiComputerLine} color={useColorModeValue('mono.black', 'primary.bright')}/>
+          <Text
+          color={useColorModeValue('mono.black', 'primary.bright')}
+          fontWeight='bold'
+          >
+            Ryan Williams
+          </Text>
         </LogoBox>
       </a>
     </Link>
