@@ -16,3 +16,19 @@ const LogoBox = styled.span`
     transform: rotate(20deg);
   }
 `
+
+const Logo = () => {
+  const logoImg = `/images/logo.png`
+
+  return (
+    <Link href='/' >
+      <a>
+        <LogoBox>
+          <Image src={logoImg} width={20} height={20} alt='logo' />
+        </LogoBox>
+      </a>
+    </Link>
+  )
+}
+
+export default Logo
