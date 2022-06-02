@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Text, useColorModeValue, Icon, useColorMode, Button } from "@chakra-ui/react";
+import { Text, useColorModeValue, Icon } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { RiComputerLine } from "react-icons/ri"
-import { useEffect } from "react";
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -21,20 +19,15 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   const logoImg = `/images/logo.png`
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  useEffect(() => {
-    toggleColorMode();
-  }, [])
 
   return (
     <>
       <Link href='/' >
         <a>
           <LogoBox>
-            <Icon as={RiComputerLine} color={useColorModeValue('primary.bright', 'mono.black')}/>
+            <Icon as={RiComputerLine} color={useColorModeValue('mono.black', 'primary.bright')}/>
             <Text
-            color={useColorModeValue('primary.bright', 'mono.black')}
+            color={useColorModeValue('mono.black', 'primary.bright')}
             fontWeight='bold'
             >
               Ryan Williams
@@ -42,9 +35,7 @@ const Logo = () => {
           </LogoBox>
         </a>
       </Link>
-      <Button onClick={toggleColorMode}>
-        See {colorMode === 'light' ? 'Dark' : 'Light'} Theme
-      </Button>
+      
     </>
   )
 }
