@@ -16,6 +16,13 @@ const colors = {
   }
 };
 
-const theme = extendTheme({ colors, config });
+const fonts = {
+  fonts: {
+    heading: "Open Sans",
+    body: "Raleway",
+  },
+}
+
+const theme = extendTheme({ colors, config, fonts });
 
 export default theme;

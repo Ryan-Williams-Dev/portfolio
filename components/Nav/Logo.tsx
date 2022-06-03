@@ -24,11 +24,19 @@ const Logo = () => {
     <>
       <Link href='/' >
         <a>
-          <LogoBox>
-            <Icon as={RiComputerLine} color={useColorModeValue('mono.black', 'primary.bright')}/>
+          <LogoBox  >
+            <Icon as={RiComputerLine} 
+              color={useColorModeValue('mono.black', 'primary.bright')}
+              fontSize='4xl'
+              ml={4}
+              mt={4}
+              />
             <Text
-            color={useColorModeValue('mono.black', 'primary.bright')}
-            fontWeight='bold'
+              color={useColorModeValue('mono.black', 'primary.bright')}
+              fontWeight='bold'
+              fontSize='4xl'
+              ml={4}
+              mt={4}
             >
               Ryan Williams
             </Text>
