@@ -14,7 +14,6 @@ const Home: NextPage = () => {
   return (
     <div className='horizontal-scroll-wrapper'>
       <Flex
-        className='scroll-box'
         height='100vh' 
         alignItems='center' 
         justifyContent='center' 
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex className='scroll-box' height={pageHeight} backgroundColor={useColorModeValue('white', 'teal.900')} justifyContent='center' alignItems='center' >
+      <Flex height={pageHeight} backgroundColor={useColorModeValue('white', 'teal.900')} justifyContent='center' alignItems='center' >
         <Heading 
           size='3xl' 
           textAlign='center' 
