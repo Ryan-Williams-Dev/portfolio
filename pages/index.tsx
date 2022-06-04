@@ -12,16 +12,17 @@ const Home: NextPage = () => {
   const pageHeight = 'calc(100vh - 64px)';
 
   return (
-    <div className='horizontal-scroll-wrapper'>
-      <Flex
-        height='100vh' 
-        alignItems='center' 
-        justifyContent='center' 
-        backgroundColor={useColorModeValue('teal.50', 'mono.black')} 
-        direction={'column'}
-      >
-        <Nav />
-        <Flex direction='column' rounded={6} >
+    <>
+      <Nav />
+      <Flex direction='column' >
+        <Flex 
+          mt='64px'
+          height={pageHeight} 
+          alignItems='center'
+          justifyContent='center' 
+          backgroundColor={useColorModeValue('teal.50', 'mono.black')} 
+          direction='column' 
+        >
           <Flex direction='row' width='100vw' m={10} justifyContent='space-evenly' alignItems='center'>
             <Box>
               <Heading 
@@ -46,18 +47,23 @@ const Home: NextPage = () => {
             <Picture />
           </Flex>
         </Flex>
-      </Flex>
-      <Flex height={pageHeight} backgroundColor={useColorModeValue('white', 'teal.900')} justifyContent='center' alignItems='center' >
-        <Heading 
-          size='3xl' 
-          textAlign='center' 
-          margin={6} 
-          color={useColorModeValue('mono.black', 'primary.bright')}
+        <Flex 
+          height={pageHeight} 
+          backgroundColor={useColorModeValue('white', 'teal.900')} 
+          justifyContent='center' 
+          alignItems='center'
         >
-          My Work
-        </Heading>
+          <Heading 
+            size='3xl' 
+            textAlign='center' 
+            margin={6} 
+            color={useColorModeValue('mono.black', 'primary.bright')}
+          >
+            My Work
+          </Heading>
+        </Flex>
       </Flex>
-    </div>
+    </>
   )
 }
 
