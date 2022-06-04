@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../styles/scrolling.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../styles/extendedTheme'

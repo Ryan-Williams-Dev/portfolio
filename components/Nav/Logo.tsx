@@ -26,17 +26,14 @@ const Logo = () => {
         <a>
           <LogoBox  >
             <Icon as={RiComputerLine} 
-              color={useColorModeValue('mono.black', 'primary.bright')}
-              fontSize='4xl'
-              ml={4}
-              mt={4}
+              color='primary.bright'
+              fontSize='2xl'
               />
             <Text
-              color={useColorModeValue('mono.black', 'primary.bright')}
+              color='primary.bright'
               fontWeight='bold'
-              fontSize='4xl'
+              fontSize='2xl'
               ml={4}
-              mt={4}
             >
               Ryan Williams
             </Text>
