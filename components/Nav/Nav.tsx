@@ -2,6 +2,8 @@ import { Box, Button, Icon, IconButton, useColorMode, useColorModeValue } from "
 import { useEffect } from "react";
 import Logo from "./Logo";
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
+import Link from "next/link";
+import NavLink from "./Nav-Link";
 
 export default function Nav() {
 
@@ -19,15 +21,24 @@ export default function Nav() {
       top={0}
       as='nav'
       w='100%'
-      bg={useColorModeValue('teal.50', 'mono.black')}
+      // bg={useColorModeValue('teal.50', 'mono.black')}
+      bg='transparent'
       style={{backdropFilter: 'blur(10px)'}}
       zIndex={1}
       justifyContent='space-between'
       alignItems='center'
       borderBottom='1px'
       borderBottomColor={useColorModeValue('mono.black', 'teal.50')}
+      blur='10px'
     >
-      <Logo/>
+      <Box as="span">
+        <Logo/>
+        <NavLink text="About" />
+        <NavLink text="Projects" />
+        <NavLink text="Experience" />
+        <NavLink text="Education" />
+        <NavLink text="Contact" />
+      </Box>
 
 
     

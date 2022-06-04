@@ -7,7 +7,8 @@ export default function Picture() {
         borderTopRightRadius='25%' 
         borderBottomLeftRadius='25%' 
         alt='Ryan WIlliams' 
-        src="images/Me-main-cropped.png" 
+        src="images/Me-main-cropped.png"
+        boxShadow='dark-lg'
       />
     </Box>
 

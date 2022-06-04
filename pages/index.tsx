@@ -16,17 +16,16 @@ const Home: NextPage = () => {
       <Nav />
       <Flex direction='column' >
         <Flex 
-          mt='64px'
-          height={pageHeight} 
+          height='100vh' 
           alignItems='center'
           justifyContent='center' 
           backgroundColor={useColorModeValue('teal.50', 'mono.black')} 
-          direction='column' 
+          direction='column'
         >
-          <Flex direction='row' width='100vw' m={10} justifyContent='space-evenly' alignItems='center'>
+          <Flex direction='row' width='100vw' mb={10} justifyContent='space-evenly' alignItems='center'>
             <Box>
               <Heading 
-                size='3xl' 
+                size='4xl' 
                 textAlign='center' 
                 margin={6} 
                 color={useColorModeValue('mono.black', 'primary.bright')}
@@ -35,12 +34,12 @@ const Home: NextPage = () => {
               </Heading>
 
               <Heading 
-                size='xl' 
+                size='2xl' 
                 textAlign='center' 
                 margin={6} 
                 color={useColorModeValue('mono.black', 'primary.bright')} 
               >
-                Full Stack Developer
+                {'<Full Stack Developer />'}
               </Heading>
 
             </Box>
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
           </Flex>
         </Flex>
         <Flex 
-          height={pageHeight} 
+          height='100vh' 
           backgroundColor={useColorModeValue('white', 'teal.900')} 
           justifyContent='center' 
           alignItems='center'
