@@ -1,6 +1,7 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, useColorModeValue } from "@chakra-ui/react";
 
 export default function Picture() {
+  
   return (
     <Box boxSize='2xl' >
       <Image 
@@ -8,7 +9,7 @@ export default function Picture() {
         borderBottomLeftRadius='25%' 
         alt='Ryan WIlliams' 
         src="images/Me-main-cropped.png"
-        boxShadow='dark-lg'
+        boxShadow={useColorModeValue('dark-lg', '0px 5px 16px 0px rgba(140,140,140,0.3)')}
       />
     </Box>
 

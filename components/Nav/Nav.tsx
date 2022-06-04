@@ -1,4 +1,4 @@
-import { Box, Button, Icon, IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { useEffect } from "react";
 import Logo from "./Logo";
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
@@ -31,14 +31,14 @@ export default function Nav() {
       borderBottomColor={useColorModeValue('mono.black', 'teal.50')}
       blur='10px'
     >
-      <Box as="span">
+      <Flex as='span' alignItems='center' >
         <Logo/>
         <NavLink text="About" />
         <NavLink text="Projects" />
         <NavLink text="Experience" />
         <NavLink text="Education" />
         <NavLink text="Contact" />
-      </Box>
+      </Flex>
 
 
     
