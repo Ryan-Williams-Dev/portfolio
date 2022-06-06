@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
+import { Box, Flex, Heading, useColorModeValue, useMediaQuery, Text } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Logo from '../components/Nav/Logo'
 import Head from 'next/head'
@@ -9,14 +9,17 @@ import Nav from '../components/Nav/Nav'
 const Home: NextPage = () => {
 
   const pageHeight = 'calc(100vh - 64px)';
+  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)')
 
   return (
+    <>
+    
     <Box 
-      className='.parallax' 
       backgroundImage='images/me-wide.jpeg'
-      minH='100vh' 
-      backgroundAttachment='fixed' 
-      backgroundPosition='47.5% 50%'
+      minH='100vh'
+      minW='100vw'
+      backgroundAttachment='fixed'
+      backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundSize='cover'
       display='flex'
@@ -25,57 +28,54 @@ const Home: NextPage = () => {
       <Nav />
       <Flex direction='column' >
         <Flex 
-          height='100%'
+          minH='100vh'
+          minW='100vw'
           alignItems='center'
           justifyContent='center' 
-          backgroundSize='cover'
           direction='column'
         >
-          <Flex direction='row' height='100vh' width='90vw' mb={10} justifyContent='space-between' alignItems='center'>
+          <Flex direction={isLargerThan1024 ? 'row' : 'column'} 
+            height='100vh' 
+            gap={isLargerThan1024 ? '30vw' : '0'}
+            maxW='90vw' 
+            justifyContent={isLargerThan1024 ? 'center' : 'space-between'} 
+            alignItems='center'
+          >
             <Box>
               <Heading 
-                size='4xl' 
+                size={isLargerThan1024 ? '4xl' : '3xl'} 
                 textAlign='center' 
-                margin={6} 
                 color='mono.black'
+                pt={isLargerThan1024 ? 0 : '7vh'}
+                animation='ease-in 5s'
               >
                 Ryan Williams
               </Heading>
-
-              <Heading 
-                size='2xl' 
-                textAlign='center' 
-                margin={6} 
-                color='mono.black'
-              >
-                {'<Full Stack Developer />'}
-              </Heading>
-
             </Box>
             <Box>
-            <Heading 
-                size='4xl' 
-                textAlign='center' 
-                margin={6} 
-                color='mono.black'
-              >
-                Ryan Williams
-              </Heading>
-
               <Heading 
                 size='2xl' 
                 textAlign='center' 
-                margin={6} 
                 color='mono.black'
+                pb={isLargerThan1024 ? 0 : '5vh'}
               >
-                {'<Full Stack Developer />'}
+                Full Stack Developer
               </Heading>
             </Box>
 
           </Flex>
         </Flex>
+        <Flex 
+          minH='100vh'
+          maxW='100vw'
+          alignItems='center'
+          justifyContent='center'
+          backgroundColor='blackAlpha.700'
+          direction='column'
+        ></Flex>
       </Flex>
     </Box>
+    </>
   )
 }
 
