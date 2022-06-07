@@ -24,6 +24,7 @@ const Home: NextPage = () => {
       backgroundSize='cover'
       display='flex'
       justifyContent='center'
+      top='0'
     >
       <Nav />
       <Flex direction='column' >
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
           alignItems='center'
           justifyContent='center' 
           direction='column'
+          top='0'
         >
           <Flex direction={isLargerThan1024 ? 'row' : 'column'} 
             height='100vh' 
@@ -43,20 +45,21 @@ const Home: NextPage = () => {
           >
             <Box>
               <Heading 
-                size={isLargerThan1024 ? '4xl' : '3xl'} 
+                size={isLargerThan1024 ? '4xl' : '2xl'} 
                 textAlign='center' 
-                color='mono.black'
+                color='white'
+                textShadow='1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;'
                 pt={isLargerThan1024 ? 0 : '7vh'}
-                animation='ease-in 5s'
               >
                 Ryan Williams
               </Heading>
             </Box>
             <Box>
               <Heading 
-                size='2xl' 
+                size={isLargerThan1024 ? '4xl' : '2xl'} 
                 textAlign='center' 
-                color='mono.black'
+                color='white'
+                textShadow='1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;'
                 pb={isLargerThan1024 ? 0 : '5vh'}
               >
                 Full Stack Developer
@@ -72,7 +75,9 @@ const Home: NextPage = () => {
           justifyContent='center'
           backgroundColor='blackAlpha.700'
           direction='column'
-        ></Flex>
+        >
+          <Heading >My Work</Heading>
+        </Flex>
       </Flex>
     </Box>
     </>
