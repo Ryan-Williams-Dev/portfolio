@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     
     <Box 
       backgroundImage='images/me-wide.jpeg'
-      minH='100vh'
+      height='100vh'
       minW='100vw'
       backgroundAttachment='fixed'
       backgroundPosition='center'
