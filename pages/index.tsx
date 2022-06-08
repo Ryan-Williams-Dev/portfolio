@@ -5,18 +5,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Nav from '../components/Nav/Nav'
+import useWindowSize, { Size } from '../hooks/useWindowSize'
 
 const Home: NextPage = () => {
 
   const pageHeight = 'calc(100vh - 64px)';
   const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)')
+  const size: Size = useWindowSize();
 
   return (
     <>
     
     <Box 
       backgroundImage='images/me-wide.jpeg'
-      height='100vh'
+      height={`${size.height}px`}
       minW='100vw'
       backgroundAttachment='fixed'
       backgroundPosition='center'
@@ -29,7 +31,7 @@ const Home: NextPage = () => {
       <Nav />
       <Flex direction='column' >
         <Flex 
-          minH='100vh'
+          height={`${size.height}px`}
           minW='100vw'
           alignItems='center'
           justifyContent='center' 
