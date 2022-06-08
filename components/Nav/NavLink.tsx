@@ -1,6 +1,6 @@
 import { Button, Link, useColorModeValue } from "@chakra-ui/react"
 
-export default function NavLink(props) {
+export default function NavLink(props: any) {
   return (
     <Button variant='ghost'>
       <Link 
